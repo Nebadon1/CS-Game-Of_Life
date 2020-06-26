@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Game of Life</title>
+
+	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script> -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js
+	"></script>
+	<link rel="stylesheet" href="/index.css">
+	<script type="text/javascript" src="sketch.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1 class="title">Game of Life!</h1>
+	<div id="sketch-div"></div>
+	
+	<h2 id="generations"></h2>
+	<div class="results"></div>
+	<div class="cells">Custom Cells</div>
+	<div class="container">
+		<!-- Trigger the modal with a button -->
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Rules & Instructions</button>
+	  
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+		  <div class="modal-dialog">
+		  
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Conway's Game of Life</h4>
+			  </div>
+			  <div class="modal-body">
+				
+				<h1>The Rules</h1>
+				<h2>For a space that is 'populated':</h2>
+				<li>Each cell with one or no neighbors dies, as if by solitude.</li>
+				<li>Each cell with four or more neighbors dies, as if by overpopulation.</li>
+				<li>Each cell with two or three neighbors survives.</li>
+				<h3>For a space that is 'empty' or 'unpopulated'</h3>
+				<li>Each cell with three neighbors becomes populated.</li>
+				<h1>Instructions</h1>
+				
+				<li>Press START to start and pause the simulation</li>
+				<li>Click on the canvas to change the state of the cell, "dead". or "alive"</li>
+				<li>Use UP and DOWN Arrows to control the framerate</li>
+				<li>Click on RANDOM to get a ramdomized set of cells </li>
+				<li>CLEAR the canvas and choose one of the custom cells and press START</li>
+				<h1>Baout the Algo</h1>
+				<p>Early patterns with unknown futures, such as the R-pentomino, led computer programmers to write programs to track the evolution of patterns in the Game of Life. Most of the early algorithms were similar: they represented the patterns as two-dimensional arrays in computer memory. Typically, two arrays are used: one to hold the current generation, and one to calculate its successor. Often 0 and 1 represent dead and live cells, respectively. A nested for loop considers each element of the current array in turn, counting the live neighbours of each cell to decide whether the corresponding element of the successor array should be 0 or 1. The successor array is displayed. For the next iteration, the arrays swap roles so that the successor array in the last iteration becomes the current array in the next iteration.</p>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+			
+		  </div>
+		</div>
+		
+	  </div>
+	  
+	
+</body>
+
+</html>

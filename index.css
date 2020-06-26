@@ -1,0 +1,18 @@
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;  
+}
+.title{
+    font-size: 7rem;
+}
+.cells{
+    margin-left: 1110px;
+    font-size: 2.5rem;
+}
+.btn-info {
+    margin-left: 170px;
+    margin-bottom: 35px;
+
+}
